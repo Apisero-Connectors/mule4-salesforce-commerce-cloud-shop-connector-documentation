@@ -1,0 +1,169 @@
+= Commerce Cloud B2C Shop Connector Examples - Mule 4
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:imagesdir: ../../../assets/images/
+
+=== ​Use Case for Searches Get Customer in Anypoint Studio 7
+Commerce Cloud B2C Shop Connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation for the connector to perform. Commerce Cloud B2C Shop Connector supports two different types of configuration; this example uses the Customer Auth Connection Provider configuration.
+After successful execution we get the customer result.
+
+The use case requires you to follow these steps:
+
+*Authorize Customer*
+
+[start = 1]
+. Firstly, perform Authorize Customer operation to get Shopper JWT token.
+
+[start = 2]
+. Create a new Mule application in Anypoint Studio (Studio), configuring port 8081 as HTTP Listener and the path as "/customer/shopper-customers/{version}/organizations/{organizationId}/customers/actions/login".
+
+image::shop-api/shop-connector-example/shop-connector-authorize-customer-http-listener-config.jpg[]
+
+[start = 3]
+. Add Operation, "Authorize Customer" from the palatte to the flow.
+
+image::shop-api/shop-connector-example/shop-connector-authorize-customer.jpg[]
+
+[start = 4]
+. Obtain the required parameters for Authorise Customer operation from the postman.
+
+image::shop-api/shop-connector-example/shop-connector-authorize-customer-body.jpg[]
+
+[start = 5]
+. Select the Commerce Cloud B2C Shop Connector Shopper Token Config from Commerce Cloud B2C Shop Connector and configure it with the required values or add a new configuration by clicking the green plus (+) symbol.
+
+image::shop-api/shop-connector-example/shop-connector-shopper-token-config.jpg[]
+
+[start = 6]
+. After entering the all required parameters, save the Mule project.
+
+. Run the project as a Mule application by right-clicking the project name in Package Explorer and selecting Run As > Mule Application.
+
+. Navigate to http://localhost:8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/actions/login, open Postman, and check the response.
+
+. You should see the JWT Token in the response header. Provide this JWT Token from Postman as authorization header parameter to perform operations.
+
+
+*Get Customer*
+
+[start = 1]
+. Create a new Mule application in Anypoint Studio (Studio), configuring port 8081 as HTTP Listener and the path as "/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}".
+
+image::shop-api/shop-connector-example/shop-connector-http-listener-config.jpg[]
+
+[start = 2]
+. Add Operation, "Get Customer" from the palatte to the flow.
+
+image::shop-api/shop-connector-example/shop-connector-get-customer-flow.jpg[]
+
+[start = 3]
+. Obtain the required parameters for Get Customer operation from the postman.
+
+image::shop-api/shop-connector-example/shop-connector-get-customer-body.jpg[]
+
+[start = 4]
+. Select the Commerce Cloud B2C Shop Connector Config from Commerce Cloud B2C Shop Connector and configure it with the required values or add a new configuration by clicking the green plus (+) symbol.
+
+image::shop-api/shop-connector-example/shop-connector-customer-auth-config.jpg[]
+
+[start = 5]
+. After entering the all required parameters, save the Mule project.
+
+. Run the project as a Mule application by right-clicking the project name in Package Explorer and selecting Run As > Mule Application.
+
+. Navigate to http://localhost:8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}, open Postman, pass xref:Authorize Customer[Shopper JWT Token] from header and check the response.
+
+. You should see the customer details in the output.
+
+=== To Create a Mule Project Using XML
+
+*Authorize Customer*
+
+. Create new Mule Application
+. Click the Configuration XML tab at the base of the canvas.
+. Copy and paste the following code:
+
+```<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:commerce-cloud-shopper-api="http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:commerce-cloud-shopperapi="http://www.mulesoft.org/schema/mule/commerce-cloud-shopperapi"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/commerce-cloud-shopperapi http://www.mulesoft.org/schema/mule/commerce-cloud-shopperapi/current/mule-commerce-cloud-shopperapi.xsd
+http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api/current/mule-commerce-cloud-shopper-api.xsd">
+	<flow name="guest-user-login-demoFlow" doc:id="d80e3540-f42b-444c-a140-d8a4548ccde7">
+		<http:listener
+			doc:name="8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/actions/login"
+			doc:id="881800d1-aa1c-4378-945e-40bc67afd93e" config-ref="HTTP_Listener_config"
+			path="/customer/shopper-customers/{version}/organizations/{organizationId}/customers/actions/login"
+			allowedMethods="POST">
+			<http:response>
+				<http:headers><![CDATA[#[output application/java
+---
+{
+"Authorization" : message.attributes.headers.Authorization
+}]]]></http:headers>
+
+			</http:response>
+			<http:error-response statusCode="#[error.errorMessage.attributes.statusCode]">
+				<http:body><![CDATA[#[output text/json --- error.errorMessage.payload]]]></http:body>
+
+			</http:error-response>
+		</http:listener>
+		<commerce-cloud-shopper-api:create-customer-shopper-customers-organizations-customers-actions-login-by-version-organization-id
+			doc:name="Authorize Customer" doc:id="91f1445a-d8c9-426e-9543-fe19b392f04e"
+			version="#[attributes.uriParams.version]"
+			organizationId="#[attributes.uriParams.organizationId]" clientId="#[attributes.queryParams.clientId]"
+			siteId="#[attributes.queryParams.siteId]" authorization="#[attributes.headers.Authorization]" config-ref="Commerce_Cloud_B2C_Shop_Connector_Shopper_token"/>
+
+	</flow>
+</mule>
+
+
+```
+
+After adding the above code in the Configuration XML tab, you will be able to see the flow in the
+ Message Flow Tab canvas.
+
+*Get Customer*
+
+. Create new Mule Application
+. Click the Configuration XML tab at the base of the canvas.
+. Copy and paste the following code:
+
+```<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:commerce-cloud-shopper-api="http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api/current/mule-commerce-cloud-shopper-api.xsd">
+	<flow name="get-customerFlow" doc:id="0b6acce3-2368-4c01-8c45-526317be9f2a">
+		<http:listener
+			doc:name="8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}"
+			doc:id="9897cc97-6ca4-4448-819e-172f4d1a89f3" config-ref="HTTP_Listener_config"
+			path="/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}"
+			allowedMethods="GET">
+			<http:error-response statusCode="#[error.errorMessage.attributes.statusCode]">
+				<http:body><![CDATA[#[output text/json --- error.errorMessage.payload]]]></http:body>
+
+			</http:error-response>
+		</http:listener>
+		<commerce-cloud-shopper-api:get-customer-shopper-customers-organizations-customers-by-version-organization-id-customer-id
+			doc:name="Get Customer" doc:id="b6ff6f45-4bd0-4d81-b3b2-068bfd6e7900"
+			config-ref="Commerce_Cloud_Shopper_Connector_Customer_auth_config"
+			version="#[attributes.uriParams.version]" organizationId="#[attributes.uriParams.organizationId]"
+			customerId="#[attributes.uriParams.customerId]" siteId="#[attributes.queryParams.siteId]" />
+	</flow>
+</mule>
+
+```
+
+== See Also
+* https://forums.mulesoft.com[MuleSoft Forum]
