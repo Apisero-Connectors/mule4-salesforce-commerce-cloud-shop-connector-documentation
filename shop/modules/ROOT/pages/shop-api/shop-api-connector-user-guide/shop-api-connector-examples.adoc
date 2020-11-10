@@ -1,6 +1,6 @@
 = Commerce Cloud B2C Shop Connector Examples - Mule 4
 ifndef::env-site,env-github[]
-include::_attributes.adoc[]
+
 endif::[]
 :imagesdir: ../../../assets/images/
 

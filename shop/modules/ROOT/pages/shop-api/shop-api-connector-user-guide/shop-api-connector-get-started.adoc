@@ -1,6 +1,6 @@
 = Commerce Cloud B2C Shop Connector - Get Started - Mule 4
 ifndef::env-site,env-github[]
-include::_attributes.adoc[]
+
 endif::[]
 :imagesdir: ../../../assets/images/
 Support Category: Select
