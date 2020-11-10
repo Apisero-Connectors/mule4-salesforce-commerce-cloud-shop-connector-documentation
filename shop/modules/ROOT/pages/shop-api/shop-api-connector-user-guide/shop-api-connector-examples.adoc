@@ -84,7 +84,8 @@ image::shop-api/shop-connector-example/shop-connector-customer-auth-config.jpg[]
 . Click the Configuration XML tab at the base of the canvas.
 . Copy and paste the following code:
 
-```<?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns:commerce-cloud-shopper-api="http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api"
 	xmlns:http="http://www.mulesoft.org/schema/mule/http"
@@ -135,7 +136,8 @@ After adding the above code in the Configuration XML tab, you will be able to se
 . Click the Configuration XML tab at the base of the canvas.
 . Copy and paste the following code:
 
-```<?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns:commerce-cloud-shopper-api="http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api"
 	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"

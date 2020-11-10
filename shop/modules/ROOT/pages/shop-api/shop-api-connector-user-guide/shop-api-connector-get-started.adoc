@@ -4,8 +4,8 @@ ifndef::env-site,env-github[]
 endif::[]
 :imagesdir: ../../../assets/images/
 Support Category: Select
-Commerce Cloud B2C Shop Connector Version Major.Minor.Patch
-// Anypoint Connector for Commerce Cloud B2C Shop Connector provides ...
+Commerce Cloud B2C Shop Connector Version 1.0.0
+
 
 == About Commerce Cloud B2C Shop Connector
 
@@ -46,6 +46,7 @@ see xref:shop-api-connector-design-center.adoc[Design Center Configuration]
 or xref:shop-api-connector-studio.adoc[Studio Configuration].The
 xref:shop-api-connector-examples.adoc[Examples] topic provides one or more use
 cases for using the connector.
+
 * Power user:
 Visit the xref:shop-api-connector-xml-maven.adoc[XML and Maven
 Support] and xref:shop-api-connector-examples.adoc[Examples] topics.

@@ -135,6 +135,59 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 |===
 
 
+=== Connection Type for Connector Shopper Token
+
+[[ConnectorShopperToken]]
+
+=== Shopper Token
+
+====== Parameters
+
+[%header%autowidth.spread]
+|===
+| Name | Type | Description | Default Value | Required
+| Default Headers a| Array of <<DefaultHeader>> |  |  | {nbsp}
+| Query Parameters a| Array of <<DefaultQueryParam>> |  |  | {nbsp}
+| Connection Timeout a| Number |  The timeout for establishing connections to the remote service |  30 | {nbsp}
+| Connection Timeout Unit a| Enumeration, one of:
+
+** NANOSECONDS
+** MICROSECONDS
+** MILLISECONDS
+** SECONDS
+** MINUTES
+** HOURS
+** DAYS |  A time unit which qualifies the Connection Timeout |  SECONDS | {nbsp}
+| Use Persistent Connections a| Boolean |  If false, each connection will be closed after the first request is completed. |  true | {nbsp}
+| Max Connections a| Number |  The maximum number of outbound connections that will be kept open at the same time |  -1 | {nbsp}
+| Connection Idle Timeout a| Number |  A timeout for how long a connection can remain idle before it is closed |  30 | {nbsp}
+| Connection Idle Timeout Unit a| Enumeration, one of:
+
+** NANOSECONDS
+** MICROSECONDS
+** MILLISECONDS
+** SECONDS
+** MINUTES
+** HOURS
+** DAYS |  A time unit which qualifies the connection Idle Timeout |  SECONDS | {nbsp}
+| Proxy Config a| <<Proxy>> |  Reusable configuration element for outbound connections through a proxy |  | {nbsp}
+| Stream Response a| Boolean |  Whether or not received responses should be streamed |  false | {nbsp}
+| Response Buffer Size a| Number |  The space in bytes for the buffer where the HTTP response will be stored. |  -1 | {nbsp}
+| Base Uri a| String |  Parameter base URI, each instance/tenant gets its own |  default base URI | {nbsp}
+| Type a| Enumeration, one of:
+
+** CREDENTIALS
+** GUEST |  Customer type: registered customer or guest customer |  | *{y}*{nbsp}
+| Protocol a| Enumeration, one of:
+
+** HTTP
+** HTTPS |  Protocol to use for communication. Valid values are HTTP and HTTPS |  HTTP | {nbsp}
+| TLS Configuration a| <<Tls>> |  |  | {nbsp}
+| Reconnection a| <<Reconnection>> |  When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy |  | {nbsp}
+|===
+
+
+
 == Operations
 * <<Add Coupon To Basket>> {nbsp}
 * <<Add Gift Certificate Item To Basket>> {nbsp}
@@ -704,7 +757,7 @@ This operation makes an HTTP POST request to the {baseUri}/customer/shopper-cust
 
 === Configurations
 
-* <<ShopConfiguration_CustomersAuth>> {nbsp}
+* <<ConnectorShopperToken>> {nbsp}
 
 === Throws
 

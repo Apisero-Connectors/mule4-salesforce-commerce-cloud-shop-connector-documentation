@@ -53,7 +53,7 @@ Commerce Cloud B2C Shop Connector supports two different types of connection pro
 
 === To Configure the Connector Using Customer Auth Connection Provider Configuration
 
-*To get Shopper JWT Token*
+*To Get Shopper JWT Token*
 
 . Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button.
 
