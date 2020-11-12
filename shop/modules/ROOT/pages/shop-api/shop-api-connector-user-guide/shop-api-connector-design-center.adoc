@@ -6,10 +6,11 @@ endif::[]
 
 Anypoint Design Center (Design Center) enables you to create apps visually. To use Design Center,
 work with your Anypoint Platform administrator to ensure that you have
-a xref:access-management::environments.adoc#to-create-a-new-environment[design
+a https://docs.mulesoft.com/access-management/environments[design
 environment].
-For more information, see the xref:design-center::fd-tour.adoc[Flow Designer
+For more information, see the https://docs.mulesoft.com/design-center/fd-tour[Flow Designer
 Tour].
+
 To create an app in Design Center:
 
 * Configure the input source (trigger) for your app.
