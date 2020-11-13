@@ -820,7 +820,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 
 === Configurations
 
-* <<ShopConfiguration_CustomersAuth>> {nbsp}
+* <<ShopConfiguration_Oauth2Application>> {nbsp}
 
 === Throws
 
@@ -3140,7 +3140,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 
 === Configurations
 
-* <<ShopConfiguration_CustomersAuth>> {nbsp}
+* <<ShopConfiguration_Oauth2Application>> {nbsp}
 
 === Throws
 
@@ -3397,7 +3397,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-orders/{versio
 
 === Configurations
 
-* <<ShopConfiguration>> {nbsp}
+* <<ShopConfiguration_Oauth2Application>> {nbsp}
 
 === Throws
 
@@ -4103,7 +4103,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 
 === Configurations
 
-* <<ShopConfiguration_CustomersAuth>> {nbsp}
+* <<ShopConfiguration_Oauth2Application>> {nbsp}
 
 === Throws
 
