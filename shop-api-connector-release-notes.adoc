@@ -34,7 +34,7 @@ Commerce Cloud B2C Shop Connector provides access to Salesforce Commerce Cloud B
 * Shopper Product
 * Shopper Gift Certificates
 
-== Fixed in This Release
+== Fixes In This Release
 Not applicable: This is the first released version.
 
 == See Also
