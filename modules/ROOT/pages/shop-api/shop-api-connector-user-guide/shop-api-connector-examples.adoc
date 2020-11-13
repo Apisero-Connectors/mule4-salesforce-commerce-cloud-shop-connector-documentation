@@ -23,7 +23,7 @@ image::shop-api/shop-connector-example/shop-connector-authorize-customer-http-li
 [start = 3]
 . Add Operation, "Authorize Customer" from the palatte to the flow.
 
-image::shop-api/shop-connector-example/shop-connector-authorize-customer.jpg[]
+image::shop-api/shop-connector-example/shop-connector-authorize-customer.png[]
 
 [start = 4]
 . Obtain the required parameters for Authorise Customer operation from the postman.
@@ -55,7 +55,7 @@ image::shop-api/shop-connector-example/shop-connector-http-listener-config.jpg[]
 [start = 2]
 . Add Operation, "Get Customer" from the palatte to the flow.
 
-image::shop-api/shop-connector-example/shop-connector-get-customer-flow.jpg[]
+image::shop-api/shop-connector-example/shop-connector-get-customer-flow.png[]
 
 [start = 3]
 . Obtain the required parameters for Get Customer operation from the postman.
