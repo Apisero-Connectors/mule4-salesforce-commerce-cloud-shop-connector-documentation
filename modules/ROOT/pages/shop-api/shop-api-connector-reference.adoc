@@ -35,8 +35,9 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 | Expiration Policy a| <<ExpirationPolicy>> |  Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit. |  | {nbsp}
 |===
 
-==== Connection Types
+=== Connection Types
 [[ShopConfiguration_CustomersAuth]]
+
 ===== Customers Auth Connection Provider
 
 ====== Parameters
@@ -86,7 +87,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 |===
 
 [[ShopConfiguration_Oauth2Application]]
-===== OAuth2 Application Connection Provider Configuration
+===== OAuth2 Application Connection Provider
 
 ====== Parameters
 
@@ -139,7 +140,7 @@ The Shop API Connector is an Operation Based Connector, which means that when yo
 
 [[ConnectorShopperToken]]
 
-=== Shopper Token
+===== Shopper Token
 
 ====== Parameters
 
@@ -279,7 +280,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -343,7 +344,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -406,8 +407,8 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 
 [%header%autowidth.spread]
 |===
-| Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Name | Type | Description |  Default Value | Required
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -471,7 +472,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -535,7 +536,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -598,7 +599,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -661,7 +662,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Item Id a|String |The ID of the item to be updated. | | *{y}*{nbsp}
@@ -724,7 +725,7 @@ This operation makes an HTTP POST request to the {baseUri}/customer/shopper-cust
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Client Id a|String |Client Id for application identification | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -789,7 +790,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -853,7 +854,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Tax Mode a|String |Tax Mode |INTERNAL |  *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -919,7 +920,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -984,7 +985,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1049,7 +1050,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1115,7 +1116,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | List Id a|String |Product List Id | | *{y}*{nbsp}
@@ -1181,7 +1182,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-orders/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -1244,7 +1245,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-orders/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Order Id a|String |The order number of the order to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1308,7 +1309,7 @@ This operation makes an HTTP POST request to the /checkout/shopper-baskets/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1372,7 +1373,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1435,7 +1436,7 @@ This operation makes an HTTP DELETE request to the /customer/shopper-customers/{
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Payment Instrument Id a|String |The ID of the payment instrument to be retrievedCustomer. | | *{y}*{nbsp}
@@ -1500,7 +1501,7 @@ This operation makes an HTTP DELETE request to the /customer/shopper-customers/{
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | List Id a|String |List id | | *{y}*{nbsp}
@@ -1564,7 +1565,7 @@ This operation makes an HTTP DELETE request to the /customer/shopper-customers/{
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Item Id a|String |The ID of the product list item to update. | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
@@ -1630,7 +1631,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1693,11 +1694,11 @@ This operation makes an HTTP GET request to the /product/shopper-products/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
-| ids a|String |The comma separated list of category IDs (max 50). || *{y}*{nbsp}
-| levels a|String |Specifies how many levels of nested subcategories you want the server to return. The default value is 1. Valid values are 0, 1, or 2. ||
-| locale a|String |The locale context. ||
+| Ids a|String |The comma separated list of category IDs (max 50). || *{y}*{nbsp}
+| Levels a|String |Specifies how many levels of nested subcategories you want the server to return. The default value is 1. Valid values are 0, 1, or 2. ||
+| Locale a|String |The locale context. ||
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -1758,11 +1759,11 @@ This operation makes an HTTP GET request to the /product/shopper-products/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
-| ids a|String |The comma separated list of category IDs (max 50). || *{y}*{nbsp}
-| levels a|String |Specifies how many levels of nested subcategories you want the server to return. The default value is 1. Valid values are 0, 1, or 2. ||
-| locale a|String |The locale context. ||
+| Id's a|String |The comma separated list of category IDs (max 50). || *{y}*{nbsp}
+| Levels a|String |Specifies how many levels of nested subcategories you want the server to return. The default value is 1. Valid values are 0, 1, or 2. ||
+| Locale a|String |The locale context. ||
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
@@ -1823,7 +1824,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -1887,7 +1888,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Address Name a|String |The name of the address to update. | | *{y}*{nbsp}
@@ -1951,7 +1952,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2014,16 +2015,16 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Cross Sites a|Boolean |Cross Sites | |
-| until a|String |until | |
-| status a|String |status | |
-| from a|String |from | |
-| offset a|Integer |offset |0 |
-| limit a|Integer |Maximum records to retrieve per request, not to exceed 50. |10 |
+| Until a|String |until | |
+| Status a|String |status | |
+| From a|String |from | |
+| Offset a|Integer |offset |0 |
+| Limit a|Integer |Maximum records to retrieve per request, not to exceed 50. |10 |
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
@@ -2083,7 +2084,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Payment Instrument Id a|String |The ID of the payment instrument to be retrievedCustomer. | | *{y}*{nbsp}
@@ -2147,7 +2148,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | List Id a|String |The product list ID. | | *{y}*{nbsp}
@@ -2211,7 +2212,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2276,7 +2277,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2339,7 +2340,7 @@ This operation makes an HTTP POST request to the /pricing/shopper-gift-certifica
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -2402,7 +2403,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-orders/{versio
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Order Id a|String |The order number of the order to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2463,7 +2464,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2526,7 +2527,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-orders/{versio
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Order Id a|String |The order number of the order to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2589,7 +2590,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -2652,12 +2653,12 @@ This operation makes an HTTP GET request to the /product/shopper-products/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
-| id a|String |The ID of the requested product. || *{y}*{nbsp}
+| Id a|String |The ID of the requested product. || *{y}*{nbsp}
 | Inventory Ids a|String |The optional inventory list IDs, for which the availability should be shown (comma-separated, max 5 inventoryListIDs). ||
-| currency a|String |The currency mnemonic specified for price. ||
-| locale a|String |The locale context. ||
+| Currency a|String |The currency mnemonic specified for price. ||
+| Locale a|String |The locale context. ||
 | All Images a|Boolean |The flag that indicates whether to retrieve the whole image model for the requested product. ||
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
@@ -2719,7 +2720,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | List Id a|String |The ID of the list. || *{y}*{nbsp}
 | Item id a|String |The ID of the item. || *{y}*{nbsp}
@@ -2783,12 +2784,12 @@ This operation makes an HTTP GET request to the /product/shopper-products/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
-| ids a|String |The IDs of the requested products (comma-separated, max 24 IDs). || *{y}*{nbsp}
+| Id's a|String |The IDs of the requested products (comma-separated, max 24 IDs). || *{y}*{nbsp}
 | Inventory Ids a|String |The optional inventory list IDs, for which the availability should be shown (comma-separated, max 5 inventoryListIDs). ||
-| currency a|String |The currency mnemonic specified for price. ||
-| locale a|String |The locale context. ||
+| Currency a|String |The currency mnemonic specified for price. ||
+| Locale a|String |The locale context. ||
 | All Image a|Boolean |The flag that indicates whether to retrieve the whole image model for the requested product. ||
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
@@ -2850,11 +2851,11 @@ This operation makes an HTTP GET request to the /pricing/shopper-promotions/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
-| ids a|String |The id of the requested promotion. || *{y}*{nbsp}
-| locale a|String |locale || *{y}*{nbsp}
+| Id's a|String |The id of the requested promotion. || *{y}*{nbsp}
+| Locale a|String |locale || *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number | The timeout for request to the remote service. |  | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
@@ -2914,13 +2915,13 @@ This operation makes an HTTP GET request to the /pricing/shopper-promotions/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Campaign Id a|String |Find the promotions assigned to this campaign (mandatory). || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Start Date a|String |The start date of the promotion in ISO8601 date time format: yyyy-MM-dd''T''HH:mmZ. ||
 | End Date a|String |The end date of the promotion in ISO8601 date time format: yyyy-MM-dd''T''HH:mmZ. ||
-| currency a|String |The currency mnemonic specified for price. This parameter is effective only for product suggestions. ||
+| Currency a|String |The currency mnemonic specified for price. This parameter is effective only for product suggestions. ||
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number | The timeout for request to the remote service. |  | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
@@ -2981,7 +2982,7 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | List Id a|String |The ID of the list. | |*{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3044,9 +3045,9 @@ This operation makes an HTTP GET request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
-| email a|String |The email address of the customer the product lists belong to. ||
+| Email a|String |The email address of the customer the product lists belong to. ||
 | First Name a|String |The first name of the customer the product lists belong to. ||
 | Last Name a|String |The last name of the customer the product lists belong to. ||
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3109,7 +3110,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3173,13 +3174,13 @@ This operation makes an HTTP GET request to the /search/shopper-search/{version}
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
-| q a|String |The search phrase (q) for which suggestions are evaluated. | |*{y}*{nbsp}
+| Q a|String |The search phrase (q) for which suggestions are evaluated. | |*{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
-| limit a|Integer |The maximum number of suggestions made per request. |5 |
-| currency a|String |The currency code specified for price. This parameter is effective only for product suggestions. ||
-| locale a|String |locale ||
+| Limit a|Integer |The maximum number of suggestions made per request. |5 |
+| Currency a|String |The currency code specified for price. This parameter is effective only for product suggestions. ||
+| Locale a|String |locale ||
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
@@ -3239,7 +3240,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Shipment Id a|String |The ID of the shipment to be modified. || *{y}*{nbsp}
@@ -3303,7 +3304,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3366,7 +3367,7 @@ This operation makes an HTTP GET request to the /checkout/shopper-orders/{versio
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Order No a|String |The order number of the order to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3429,7 +3430,7 @@ This operation makes an HTTP DELETE request to the /customer/shopper-customers/{
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
@@ -3491,16 +3492,16 @@ This operation makes an HTTP GET request to the /search/shopper-search/{version}
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
-| q a|String |The query phrase to search for. For example to search for a product "shirt", type q=shirt. ||
-| refines a|List |Parameter that represents a refinement attribute or values pair. Refinement attribute ID and  values are separated by '='.||
-| sort a|String |The ID of the sorting option to sort the search hits. ||
-| currency a|String |The currency mnemonic specified for price. This parameter is effective only if the returned results contain prices. ||
-| locale a|String |locale ||
-| offset a|Integer |offset|0 |
-| limit a|Integer |Maximum records to retrieve per request, not to exceed 200.|25 |
+| Q a|String |The query phrase to search for. For example to search for a product "shirt", type q=shirt. ||
+| Refines a|List |Parameter that represents a refinement attribute or values pair. Refinement attribute ID and  values are separated by '='.||
+| Sort a|String |The ID of the sorting option to sort the search hits. ||
+| Currency a|String |The currency mnemonic specified for price. This parameter is effective only if the returned results contain prices. ||
+| Locale a|String |locale ||
+| Offset a|Integer |offset|0 |
+| Limit a|Integer |Maximum records to retrieve per request, not to exceed 200.|25 |
 | Config Ref a| ConfigurationProvider |  The name of the configuration to be used to execute this component |  | *{y}*{nbsp}
 | Response Timeout a| Number |  The timeout for request to the remote service. |  | {nbsp}
 | Response Timeout Unit a| Enumeration, one of:
@@ -3561,7 +3562,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -3624,7 +3625,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a |String |The ID of the basket to be modified.|| *{y}*{nbsp}
 | Coupon Item Id a|String |The ID of the coupon item to be removed.|| *{y}*{nbsp}
@@ -3688,7 +3689,7 @@ This operation makes an HTTP DELETE request to the /customer/shopper-customers/{
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Address Name a|String |The name of the address to update. | | *{y}*{nbsp}
@@ -3752,7 +3753,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Gift Certificate Item Id a|String |The ID of the gift certificate item to be updated. | | *{y}*{nbsp}
@@ -3816,7 +3817,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Item Id a|String |The ID of the item to be updated. | | *{y}*{nbsp}
@@ -3880,7 +3881,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Payment Instrument Id a|String |Payment Instrument Id. | | *{y}*{nbsp}
@@ -3944,7 +3945,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-orders/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Order No a|String |The order number of the order to be modified. || *{y}*{nbsp}
 | Payment Instrument Id a|String |The ID of the payment instrument to be updated. | | *{y}*{nbsp}
@@ -4008,7 +4009,7 @@ This operation makes an HTTP DELETE request to the /checkout/shopper-baskets/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Shipment Id a|String |The ID of the shipment to be modified.|| *{y}*{nbsp}
@@ -4072,7 +4073,7 @@ This operation makes an HTTP POST request to the /customer/shopper-customers/{ve
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -4135,7 +4136,7 @@ This operation makes an HTTP PATCH request to the /checkout/shopper-baskets/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -4199,7 +4200,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. || *{y}*{nbsp}
 | Use As Shipping a|Boolean |Use As Shipping. ||
@@ -4264,7 +4265,7 @@ This operation makes an HTTP PATCH request to the /customer/shopper-customers/{v
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -4328,7 +4329,7 @@ This operation makes an HTTP PATCH request to the /customer/shopper-customers/{v
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Address Name a|String |The name of the address to update. | | *{y}*{nbsp}
@@ -4391,7 +4392,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Site Id a|String |Site id | | *{y}*{nbsp}
@@ -4455,7 +4456,7 @@ This operation makes an HTTP PUT request to the /customer/shopper-customers/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -4519,7 +4520,7 @@ This operation makes an HTTP PATCH request to the /customer/shopper-customers/{v
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | Content a| Binary |  The content to use |  #[payload] | *{y}*{nbsp}
@@ -4584,7 +4585,7 @@ This operation makes an HTTP PATCH request to the /customer/shopper-customers/{v
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |Organization Id | | *{y}*{nbsp}
 | Customer Id a|String |Customer Id | | *{y}*{nbsp}
 | List Id a|String |Product List Id | | *{y}*{nbsp}
@@ -4650,7 +4651,7 @@ This operation makes an HTTP PATCH request to the /checkout/shopper-baskets/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Gift Certificate Item Id a|String |The ID of the gift certificate item to be updated. || *{y}*{nbsp}
@@ -4716,7 +4717,7 @@ This operation makes an HTTP PATCH request to the /checkout/shopper-baskets/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Item Id a|String |The ID of the item to be updated. || *{y}*{nbsp}
@@ -4781,7 +4782,7 @@ This operation makes an HTTP PATCH request to the /checkout/shopper-orders/{vers
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Order No a|String |The order number of the order to be modified. | | *{y}*{nbsp}
 | Payment Instrument Id a|String |The ID of the payment instrument to be updated. || *{y}*{nbsp}
@@ -4846,7 +4847,7 @@ This operation makes an HTTP PATCH request to the /checkout/shopper-baskets/{ver
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Shipment Id a|String |The ID of the shipment to be modified. || *{y}*{nbsp}
@@ -4911,7 +4912,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Shipment Id a|String |The ID of the shipment to be modified. || *{y}*{nbsp}
@@ -4977,7 +4978,7 @@ This operation makes an HTTP PUT request to the /checkout/shopper-baskets/{versi
 [%header%autowidth.spread]
 |===
 | Name | Type | Description | Default Value | Required
-| version a|String |Version | | *{y}*{nbsp}
+| Version a|String |Version | | *{y}*{nbsp}
 | Organization Id a|String |An identifier for the organization the request is being made by. | | *{y}*{nbsp}
 | Basket Id a|String |The ID of the basket to be modified. | | *{y}*{nbsp}
 | Shipment Id a|String |The ID of the shipment to be modified. || *{y}*{nbsp}
