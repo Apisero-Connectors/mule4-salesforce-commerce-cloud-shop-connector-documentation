@@ -36,7 +36,7 @@ To use Commerce Cloud B2C Shop Connector, you need:
 
 * Anypoint Studio version 7 and later
 * Commerce Cloud B2C Shop Connector
-* Commerce cloud credentials such as client Id, Client Secret, Scopes to access Shop API which the user needs to get from the Commerce Cloud team.
+* Commerce cloud credentials such as Client Id, Client Secret, Scopes to access Shop API which the user needs to get from the Commerce Cloud team.
 
 
 == Audience
@@ -64,6 +64,6 @@ xref:shop-api-connector-studio.adoc[Anypoint Studio].
 
 == See Also
 
-* https://www.mulesoft.com/exchange/?search= [Anypoint
+* https://www.mulesoft.com/exchange[Anypoint
 Exchange]
 * https://forums.mulesoft.com[MuleSoft Forum]

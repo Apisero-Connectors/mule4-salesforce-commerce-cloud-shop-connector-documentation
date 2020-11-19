@@ -69,6 +69,9 @@ image::shop-api/shop-connector-example/shop-connector-get-customer-body.jpg[]
 image::shop-api/shop-connector-example/shop-connector-customer-auth-config.jpg[]
 
 [start = 5]
+. In the above image we are using the authentication token from Authorize Customer as Authorization parameter value.
+
+[start = 6]
 . After entering the all required parameters, save the Mule project.
 
 . Run the project as a Mule application by right-clicking the project name in Package Explorer and selecting Run As > Mule Application.
