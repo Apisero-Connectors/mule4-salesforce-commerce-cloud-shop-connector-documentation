@@ -26,13 +26,17 @@ Commerce Cloud B2C Shop Connector is compatible with these software versions:
 
 Commerce Cloud B2C Shop Connector provides access to Salesforce Commerce Cloud B2C Shop APIs for the below workflows:
 
-* Shopper Customer
-* Shopper Baskets
-* Shopper Orders
-* Shopper Promotions
-* Shopper Search
-* Shopper Product
-* Shopper Gift Certificates
+[%header%autowidth.spread]
+|===
+|Workflow |Version
+|Shopper Customer |0.0.23
+|Shopper Baskets |0.2.1
+|Shopper Orders |0.0.27
+|Shopper Promotions |1.0.18
+|Shopper Search |1.0.23
+|Shopper Product |0.0.13
+|Shopper Gift Certificates |1.0.9
+|===
 
 == Fixes In This Release
 Not applicable: This is the first released version.
