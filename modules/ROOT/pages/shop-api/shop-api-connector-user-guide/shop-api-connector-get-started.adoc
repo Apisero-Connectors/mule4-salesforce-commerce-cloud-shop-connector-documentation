@@ -28,7 +28,7 @@ Shop API Connector enables a client to interact with the system as a shop custom
 
 Before creating an app, you must have access to the Commerce Cloud B2C Shop Connector target resource and
 Anypoint Platform. You also need to understand how to create a Mule app using
-Anypoint Design Center (Design Center) or Anypoint Studio (Studio).
+Anypoint Design Center or Anypoint Studio.
 
 Further, you must be familiar with Mule runtime engine (Mule), Anypoint Connectors, Anypoint Studio Essentials, Mule flows, and Mule Global Elements.
 
@@ -36,7 +36,7 @@ To use Commerce Cloud B2C Shop Connector, you need:
 
 * Anypoint Studio version 7 and later
 * Commerce Cloud B2C Shop Connector
-* Commerce cloud credentials such as client Id, Client Secret, Scopes to access Shop API which the user needs to get from the Commerce Cloud team.
+* Commerce cloud credentials such as Client Id, Client Secret, Scopes to access Shop API which the user needs to get from the Salesforce team.
 
 
 == Audience
@@ -64,6 +64,6 @@ xref:shop-api-connector-studio.adoc[Anypoint Studio].
 
 == See Also
 
-* https://www.mulesoft.com/exchange/?search= [Anypoint
+* https://www.mulesoft.com/exchange[Anypoint
 Exchange]
 * https://forums.mulesoft.com[MuleSoft Forum]

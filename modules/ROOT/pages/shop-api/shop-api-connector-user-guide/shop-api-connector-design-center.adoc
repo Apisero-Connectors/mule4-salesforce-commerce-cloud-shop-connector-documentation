@@ -73,7 +73,8 @@ Design Center automatically saves all changes.
 |*Field* |Description |Required?
 |*version*|Version| {y}
 |*Organization Id* |Organization Id | {y}
-|*Client Id* |Client Id for application identification| {y}
+|*Client Id* |ID of the client account created with Salesforce Commerce
+| {y}
 |*Site Id* |Site id | {y}
 |*Authorization*|Basic for type credentials and Bearer for type refresh |
 |===
