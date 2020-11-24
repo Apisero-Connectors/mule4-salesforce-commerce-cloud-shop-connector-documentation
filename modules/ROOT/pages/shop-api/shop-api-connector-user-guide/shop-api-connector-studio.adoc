@@ -1,57 +1,102 @@
-= Commerce Cloud B2C Shop Connector Studio Configuration - Mule 4
+= Use Anypoint Studio to Configure Commerce Cloud B2C Shop Connector - Mule 4
 ifndef::env-site,env-github[]
-
+include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../../assets/images/
 
-Before you can use a connector in Anypoint Studio, you must:
+Anypoint Studio (Studio) editors help you design and update your Mule applications, properties, and configuration files.
 
-. Install the connector by using either Anypoint Exchange or Anypoint Studio.
-. Configure the connector.
-. Configure an input source for the connector.
+To add and configure a connector in Studio:
 
-== Install the Connector Using Exchange
-. In Studio, create a Mule project.
-. Click the Exchange (X) icon in the upper left of the Studio taskbar.
-. In Exchange, click Login and supply your Anypoint Platform username and password.
-. Search for Commerce Cloud B2C Shop Connector.
-. Select Commerce Cloud B2C Shop Connector and click Add to project.
-. Follow the prompts to install Commerce Cloud B2C Shop Connector.
+. <<create-mule-project,Create a Mule project>>.
+. <<add-connector-to-project,Add the connector to your Mule project>>.
+. <<configure-input-source,Configure an input source for the connector's flow>>.
+. <<add-connector-operation,Add a connector operation to the flow>>.
+. <<configure-global-element,Configure a global element for the connector>>.
+. <<conigure-other-fields,Configure the other connector fields>>.
 
-== Install the Connector in Studio
-. In Studio, create a Mule project.
-. In the Mule palette, click (X) Search in Exchange.
-. In Add Modules to Project, type Commerce Cloud B2C Shop Connector in the search field.
+When you run the connector, you can view the app log to check for problems, as described in <<view-app-log,View the App Log>>.
+
+If you are new to configuring connectors in Studio, see xref:connectors::introduction/intro-config-use-studio.adoc[Use Studio to Configure a Connector]. If, after reading this topic, you need additional information about the connector fields, see the xref:shop-api-connector-reference.adoc[Commerce Cloud B2C Shop Connector Reference].
+
+[[create-mule-project]]
+== Create a Mule Project
+
+In Studio, create a new Mule project in which to add and configure the connector: 
+
+. In Studio, select *File > New > Mule Project*.
+. Enter a name for your Mule project and click *Finish*.
+
+[[add-connector-to-project]]
+== Add the Connector to Your Mule Project
+
+Add Commerce Cloud B2C Shop Connector to your Mule project to automatically populate the XML code with the connector's namespace and schema location and add the required dependencies to the project's `pom.xml` file:
+
+. In the *Mule Palette* view, click *(X) Search in Exchange*.
+. In *Add Modules to Project*, type `Commerce Cloud B2C Shop Connector` in the search field.
 . Click Commerce Cloud B2C Shop Connector in *Available modules*.
-. Click Add.
-. Click Finish.
+. Click *Add*.
+. Click *Finish*.
 
-== Add the Connector as a Mule App Dependency
+Adding a connector to a Mule project in Studio does not make that connector available to other projects in your Studio workspace.
 
-. Open your Mule project in Anypoint Studio.
-. Add the connector as a dependency in the pom.xml file:
+[[configure-input-source]]
+== Configure a Source
 
-```
-<dependency>
-    <groupId>com.mulesoft.connectors</groupId>
-    <artifactId>commerce-cloud-shopperapi</artifactId>
-    <version>RELEASE</version>
-    <classifier>mule-plugin</classifier>
-</dependency>
-```
+A source initiates a flow when a specified condition is met.
+You can configure one of these sources to use with Commerce Cloud B2C Shop Connector:
 
-When Studio is updated, a message pops up in the bottom-right corner. Click the message to install the
-update, and then update the Apache Maven pom.xml file dependencies to use the new version number.
+* *HTTP > Listener* +
+Initiates a flow each time it receives a request on the configured host and port
+* *Scheduler* +
+Initiates a flow when a time-based condition is met
 
-== Configure the Connector
-Commerce Cloud B2C Shop Connector supports two different types of connection provider:
+For example, to configure an HTTP listener, follow these steps:
+
+. In the *Mule Palette* view, select *HTTP > Listener*.
+. Drag *Listener* to the Studio canvas.
+. On the *Listener* configuration screen, optionally change the value of the *Display Name* field.
+. Specify a value for the *Path* field.
+. Click the plus sign (+) next to the *Connector configuration* field to configure a global element that can be used by all instances of HTTP *Listener* in the app.
+. On the *General* tab, specify connection information for the connector.
+. On the *TLS* tab, optionally specify the TLS information for the connector.
+. On the *Advanced* tab, optionally specify reconnection information, including a reconnection strategy.
+. Click *Test Connection* to confirm that Mule can connect with the specified server.
+. Click *OK*.
+
+[[add-connector-operation]]
+== Add a Connector Operation to the Flow
+
+When you add a connector operation to your flow, you immediately define a specific operation for that connector to perform.
+
+To add an operation for Commerce Cloud B2C Shop Connector, follow these steps:
+
+. In the *Mule Palette* view, select *Commerce Cloud B2C Shop Connector* and then select the desired operation.
+. Drag the operation onto the Studio canvas to the right of the input source.
+
+[[configure-global-element]]
+== Configure a Global Element for the Connector
+
+When you configure a connector, it’s best to configure a global element that all instances of that connector in the app can use. Configuring a global element requires you to provide the authentication credentials that the connector requires to access the target Commerce Cloud B2C Shop Connector system. Commerce Cloud B2C Shop Connector supports two different types of connection provider:
 
 . Customer Auth Connection Provider
-
 . OAuth2 Application Connection Provider
 
+To configure the global element for Commerce Cloud B2C Shop Connector, follow these steps:
 
-=== To Configure the Connector Using Customer Auth Connection Provider Configuration
+. Select the name of the connector in the Studio canvas.
+. In the configuration screen for the operation, click the plus sign (+) next to the *Connector configuration* field to access the global element configuration fields.
+. On the *General* tab, configure Customer Auth Connection Provider, OAuth2 Application Connection Provider, as described in the <<ShopConfiguration_CustomersAuth, Customers Auth Connection Provider>> and <<ShopConfiguration_Oauth2Application, OAuth2 Application Connection Provider>> sections.
+
+You can reference a configuration file that contains ANT-style property placeholders (recommended), or you can enter your authorization credentials in the global configuration properties. For information about the benefits of using property placeholders and how to configure them, see xref:introduction/intro-connector-configuration-overview.adoc[Anypoint Connector Configuration].
+
+. On the *Advanced* tab, optionally specify reconnection information, including a reconnection strategy.
+
+. Click *Test Connection* to confirm that Mule can connect with the specified server.
+. Click *OK*.
+
+[[ShopConfiguration_CustomersAuth]]
+=== Customer Auth Connection Provider
 
 *To Get Shopper JWT Token*
 
@@ -110,7 +155,8 @@ image::shop-api/customer-auth-configuration/shop-connector-customer-auth-config.
     </commerce-cloud-shopper-api:customer-auth-config>
 ```
 
-=== To Configure the Connector Using OAuth2 Application Connection Provider configuration
+[[ShopConfiguration_Oauth2Application]]
+=== OAuth2 Application Connection Provider
 
 . Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
 
@@ -147,9 +193,25 @@ image::shop-api/oauth2-configuration/shop-connector-oauth2-config.jpg[]
 	</commerce-cloud-shopper-api:config>
 ```
 
+[[view-app-log]]
 
-== Configure an Input Source
-Configure an input source for the flow, such as a HTTP Listener, or Scheduler.
+== View the App Log
+
+To check for problems, you can view the app log as follows:
+
+* If you’re running the app from Anypoint Platform, the app log output is visible in the Anypoint Studio console window.
+* If you’re running the app using Mule from the command line, the app log output is visible in your OS console.
+
+Unless the log file path is customized in the app’s log file (`log4j2.xml`), you can also view the app log in the default location `MULE_HOME/logs/<app-name>.log`. You can configure the location of the log path in the app log file `log4j2.xml`.
+
+[[conigure-other-fields]]
+
+== Configure the other connector fields
+
+After you configure a global element and connection information, configure the other fields for the connector.
 
 == See Also
-* https://forums.mulesoft.com[MuleSoft Forum]
+
+* xref:connectors::introduction/anypoint-connector-authentication.adoc[Anypoint Connector Authentication]
+// Add link to connector reference and specific connector intro topic
+* https://help.mulesoft.com[MuleSoft Help Center]
