@@ -213,5 +213,5 @@ After you configure a global element and connection information, configure the o
 == See Also
 
 * xref:connectors::introduction/anypoint-connector-authentication.adoc[Anypoint Connector Authentication]
-// Add link to connector reference and specific connector intro topic
+* xref:shop-api-connector-reference.adoc[Connector Reference]
 * https://help.mulesoft.com[MuleSoft Help Center]
