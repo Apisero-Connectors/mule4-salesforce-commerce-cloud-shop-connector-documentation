@@ -7,7 +7,8 @@ _Support Category: Select_
 Anypoint Connector for Commerce Cloud B2C Shop APIs provides Mule users with a quick and easy way to integrate with Salesforce Commerce Cloud B2C Shop API endpoints.
 
 == 1.0.0
-November 2020
+
+*November 23, 2020*
 
 This release of Commerce Cloud B2C Shop Connector is compatible with Mule 4 but not Mule 3.
 
@@ -38,7 +39,7 @@ Commerce Cloud B2C Shop Connector provides access to Salesforce Commerce Cloud B
 |Shopper Gift Certificates |1.0.9
 |===
 
-== Fixes In This Release
+== Fixed In This Release
 Not applicable: This is the first released version.
 
 == See Also
