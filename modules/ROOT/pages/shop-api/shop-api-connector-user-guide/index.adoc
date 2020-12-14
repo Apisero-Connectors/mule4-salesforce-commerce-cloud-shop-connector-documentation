@@ -12,7 +12,7 @@ For information about compatibility and fixed issues, see Commerce Cloud B2C Sho
 
 To use this connector, you must be familiar with:
 
-* The Commerce Cloud B2C Shop Connector’s API
+* https://developer.commercecloud.com/s/commerce-api-apis[Salesforce Commerce Cloud Shop API]
 * Anypoint Connectors
 * Mule runtime engine (Mule)
 * Elements and global elements in a Mule flow
