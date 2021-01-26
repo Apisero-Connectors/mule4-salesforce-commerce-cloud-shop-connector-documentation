@@ -1,4 +1,5 @@
 = Use Anypoint Studio to Configure Commerce Cloud B2C Shop Connector - Mule 4
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -17,12 +18,13 @@ To add and configure a connector in Studio:
 
 When you run the connector, you can view the app log to check for problems, as described in <<view-app-log,View the App Log>>.
 
-If you are new to configuring connectors in Studio, see xref:connectors::introduction/intro-config-use-studio.adoc[Use Studio to Configure a Connector]. If, after reading this topic, you need additional information about the connector fields, see the xref:shop-api-connector-reference.adoc[Commerce Cloud B2C Shop Connector Reference].
+If you are new to configuring connectors in Studio, see xref:connectors::introduction/intro-config-use-studio.adoc[Use Studio to Configure a Connector].
+If, after reading this topic, you need additional information about the connector fields, see the xref:shop-api-connector-reference.adoc[Commerce Cloud B2C Shop Connector Reference].
 
 [[create-mule-project]]
 == Create a Mule Project
 
-In Studio, create a new Mule project in which to add and configure the connector: 
+In Studio, create a new Mule project in which to add and configure the connector:
 
 . In Studio, select *File > New > Mule Project*.
 . Enter a name for your Mule project and click *Finish*.
@@ -32,6 +34,7 @@ In Studio, create a new Mule project in which to add and configure the connector
 
 Add Commerce Cloud B2C Shop Connector to your Mule project to automatically populate the XML code with the connector's namespace and schema location and add the required dependencies to the project's `pom.xml` file:
 
+. To avoid dependency errors, update maven settings.xml. Please refer https://docs.mulesoft.com/mule-runtime/4.3/maven-reference[Maven Reference] for more information (Ignore if already done).
 . In the *Mule Palette* view, click *(X) Search in Exchange*.
 . In *Add Modules to Project*, type `Commerce Cloud B2C Shop Connector` in the search field.
 . Click Commerce Cloud B2C Shop Connector in *Available modules*.
@@ -59,8 +62,8 @@ For example, to configure an HTTP listener, follow these steps:
 . Specify a value for the *Path* field.
 . Click the plus sign (+) next to the *Connector configuration* field to configure a global element that can be used by all instances of HTTP *Listener* in the app.
 . On the *General* tab, specify connection information for the connector.
-. On the *TLS* tab, optionally specify the TLS information for the connector.
-. On the *Advanced* tab, optionally specify reconnection information, including a reconnection strategy.
+. On the *TLS* tab, optionally specify the TLS information for the connector. For TLS details and its configuration refer https://docs.mulesoft.com/mule-runtime/4.3/tls-configuration[TLS Configuration].
+. On the *Advanced* tab, optionally specify reconnection information, including a reconnection strategy. For Reconnection strategy details and its configuration refer https://docs.mulesoft.com/mule-runtime/4.3/reconnection-strategy-about[Reconnection Strategies].
 . Click *Test Connection* to confirm that Mule can connect with the specified server.
 . Click *OK*.
 
@@ -74,10 +77,14 @@ To add an operation for Commerce Cloud B2C Shop Connector, follow these steps:
 . In the *Mule Palette* view, select *Commerce Cloud B2C Shop Connector* and then select the desired operation.
 . Drag the operation onto the Studio canvas to the right of the input source.
 
+image::shop-api/shop-connector-example/shop-connector-add-operation-to-flow.JPG[]
+
 [[configure-global-element]]
 == Configure a Global Element for the Connector
 
-When you configure a connector, it’s best to configure a global element that all instances of that connector in the app can use. Configuring a global element requires you to provide the authentication credentials that the connector requires to access the target Commerce Cloud B2C Shop Connector system. Commerce Cloud B2C Shop Connector supports two different types of connection provider:
+When you configure a connector, it’s best to configure a global element that all instances of that connector in the app can use.
+Configuring a global element requires you to provide the authentication credentials that the connector requires to access the target Commerce Cloud B2C Shop Connector system.
+Commerce Cloud B2C Shop Connector supports two different types of connection provider:
 
 . Customer Auth Connection Provider
 . OAuth2 Application Connection Provider
@@ -88,7 +95,8 @@ To configure the global element for Commerce Cloud B2C Shop Connector, follow th
 . In the configuration screen for the operation, click the plus sign (+) next to the *Connector configuration* field to access the global element configuration fields.
 . On the *General* tab, configure Customer Auth Connection Provider, OAuth2 Application Connection Provider, as described in the <<ShopConfiguration_CustomersAuth, Customers Auth Connection Provider>> and <<ShopConfiguration_Oauth2Application, OAuth2 Application Connection Provider>> sections.
 
-You can reference a configuration file that contains ANT-style property placeholders (recommended), or you can enter your authorization credentials in the global configuration properties. For information about the benefits of using property placeholders and how to configure them, see xref:introduction/intro-connector-configuration-overview.adoc[Anypoint Connector Configuration].
+You can reference a configuration file that contains ANT-style property placeholders (recommended), or you can enter your authorization credentials in the global configuration properties.
+For information about the benefits of using property placeholders and how to configure them, see xref:introduction/intro-connector-configuration-overview.adoc[Anypoint Connector Configuration].
 
 . On the *Advanced* tab, optionally specify reconnection information, including a reconnection strategy.
 
@@ -100,7 +108,8 @@ You can reference a configuration file that contains ANT-style property placehol
 
 *To Get Shopper JWT Token*
 
-. Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button.
+. Go back to Anypoint Studio.
+In Mule Application, click on Global Elements and click Create button.
 
 . Collapse connector configuration, select Commerce Cloud B2C Shop Connector Shopper Token and click OK. You should see as below screen.
 
@@ -122,10 +131,10 @@ Configuration looks like this:
     </commerce-cloud-shopper-api:shopper-token-config>
 ```
 
-
 *Customer Auth Connection Provider Configuration*
 
-. Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button.
+. Go back to Anypoint Studio.
+In Mule Application, click on Global Elements and click Create button.
 
 . Collapse connector configuration, select Commerce Cloud B2C Shop Connector Customer Auth Config and click OK. You should see as below screen.
 
@@ -134,7 +143,7 @@ Configuration looks like this:
 [options="header",width="50%"]
 |============
 |Field Name   |Value
-|Base URI    |Parameter base URI. Each instance/tenant gets its own.
+|Base URI    |URL of the service with which the Connector interacts.
 |Authorization |Shopper JWT token
 |============
 
@@ -158,7 +167,8 @@ image::shop-api/customer-auth-configuration/shop-connector-customer-auth-config.
 [[ShopConfiguration_Oauth2Application]]
 === OAuth2 Application Connection Provider
 
-. Go back to Anypoint Studio. In Mule Application, click on Global Elements and click Create button
+. Go back to Anypoint Studio.
+In Mule Application, click on Global Elements and click Create button
 
 . Collapse connector configuration, select Commerce Cloud B2C Shop Connector Config and click OK. You should see as below screen
 
@@ -194,7 +204,6 @@ image::shop-api/oauth2-configuration/shop-connector-oauth2-config.jpg[]
 ```
 
 [[view-app-log]]
-
 == View the App Log
 
 To check for problems, you can view the app log as follows:
@@ -202,10 +211,10 @@ To check for problems, you can view the app log as follows:
 * If you’re running the app from Anypoint Platform, the app log output is visible in the Anypoint Studio console window.
 * If you’re running the app using Mule from the command line, the app log output is visible in your OS console.
 
-Unless the log file path is customized in the app’s log file (`log4j2.xml`), you can also view the app log in the default location `MULE_HOME/logs/<app-name>.log`. You can configure the location of the log path in the app log file `log4j2.xml`.
+Unless the log file path is customized in the app’s log file (`log4j2.xml`), you can also view the app log in the default location `MULE_HOME/logs/<app-name>.log`.
+You can configure the location of the log path in the app log file `log4j2.xml`.
 
 [[conigure-other-fields]]
-
 == Configure the other connector fields
 
 After you configure a global element and connection information, configure the other fields for the connector.

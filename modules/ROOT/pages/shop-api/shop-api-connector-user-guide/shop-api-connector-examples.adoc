@@ -1,10 +1,12 @@
 = Commerce Cloud B2C Shop Connector Example - Mule 4
+
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :imagesdir: ../../../assets/images/
 
-Commerce Cloud B2C Shop Connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation for the connector to perform. Commerce Cloud B2C Shop Connector supports two different types of configuration.
+Commerce Cloud B2C Shop Connector is an operation-based connector, which means that when you add the connector to your flow, you need to configure a specific operation for the connector to perform.
+Commerce Cloud B2C Shop Connector supports two different types of configuration.
 This example uses the Customer Auth Connection Provider configuration.
 After successful execution of the Get Customer operation we get the customer result.
 
@@ -42,8 +44,8 @@ image::shop-api/shop-connector-example/shop-connector-shopper-token-config.jpg[]
 
 . Navigate to http://localhost:8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/actions/login, open Postman, and check the response.
 
-. You should see the JWT Token in the response header. Provide this JWT Token from Postman as authorization header parameter to perform operations.
-
+. You should see the JWT Token in the response header.
+Provide this JWT Token from Postman as authorization header parameter to perform operations.
 
 *Get Customer*
 
@@ -53,7 +55,7 @@ image::shop-api/shop-connector-example/shop-connector-shopper-token-config.jpg[]
 image::shop-api/shop-connector-example/shop-connector-http-listener-config.jpg[]
 
 [start = 2]
-. Add Operation, "Get Customer" from the palatte to the flow.
+. Add Operation, "Get Customer" from the palette to the flow.
 
 image::shop-api/shop-connector-example/shop-connector-get-customer-flow.png[]
 
@@ -105,8 +107,7 @@ http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api http://www.muleso
 				<http:headers><![CDATA[#[output application/java
 ---
 {
-"Authorization" : message.attributes.headers.Authorization
-}]]]></http:headers>
+"Authorization" : message.attributes.headers.Authorization }]]]></http:headers>
 
 			</http:response>
 			<http:error-response statusCode="#[error.errorMessage.attributes.statusCode]">
@@ -141,8 +142,7 @@ http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api http://www.muleso
 
 Paste this code into your Studio XML editor to quickly load the flow for this example into your Mule app:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
+```xml <?xml version="1.0" encoding="UTF-8"?>
 
 <mule xmlns:commerce-cloud-shopper-api="http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api"
 xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
@@ -151,14 +151,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api http://www.mulesoft.org/schema/mule/commerce-cloud-shopper-api/current/mule-commerce-cloud-shopper-api.xsd">
-<flow name="get-customerFlow">
-<http:listener
-doc:name="8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}"
-config-ref="HTTP_Listener_config"
-path="/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}"
-allowedMethods="GET">
-<http:error-response statusCode="#[error.errorMessage.attributes.statusCode]">
-<http:body><![CDATA[#[output text/json --- error.errorMessage.payload]]]></http:body>
+<flow name="get-customerFlow"> <http:listener doc:name="8081/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}" config-ref="HTTP_Listener_config" path="/customer/shopper-customers/{version}/organizations/{organizationId}/customers/{customerId}" allowedMethods="GET"> <http:error-response statusCode="#[error.errorMessage.attributes.statusCode]"> <http:body><![CDATA[#[output text/json --- error.errorMessage.payload]]]></http:body>
 
 			</http:error-response>
 		</http:listener>

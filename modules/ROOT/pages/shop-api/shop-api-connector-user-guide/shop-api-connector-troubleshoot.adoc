@@ -61,13 +61,12 @@ There are few cases the Commerce Cloud B2C Shop Connector may return 415 unsuppo
 == Causes
 
 * The body type the user is passing to the connector Content parameter does not match the required input type.
-* Expression mode is enabled and the output type of the body is not mentioned as  “application/json".
+* Expression mode is enabled and the output type of the body is not mentioned as “application/json".
 
 == Solution
 
 * Use the correct type for the body.
 * Enable Expression mode and mention the output type of the body as “application/json".
-
 
 == See Also
 

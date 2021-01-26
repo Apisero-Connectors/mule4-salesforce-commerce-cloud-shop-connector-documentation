@@ -6,7 +6,7 @@ Anypoint Connector for Salesforce Commerce Cloud B2C Shop APIs is an operation-b
 
 Shop API Connector enables a client to interact with the system as a shop customer or as an agent shopping on behalf of a customer.
 
-For information about compatibility and fixed issues, see Commerce Cloud B2C Shop Connector Release Notes. 
+For information about compatibility and fixed issues, see Commerce Cloud B2C Shop Connector Release Notes.
 
 == Prerequisites
 
@@ -43,7 +43,7 @@ To create your Mule app, see:
 +
 * Advanced user
 +
-* Read the following: 
+* Read the following:
 
 * xref:shop-api-connector-xml-maven.adoc[XML and Maven Support]
 * xref:shop-api-connector-examples.adoc[Examples], with use case information for the connector
@@ -56,7 +56,7 @@ Commerce Cloud B2C Shop Connector connections can use the following authenticati
 +
 Uses Bearer Token generated using Authorize Customer Operation.
 +
-* OAuth2 
+* OAuth2
 +
 Delegates user authentication to the service hosting the user account
 +
